@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+          <div class="box">
+            <form @submit.prevent="">
+                <input type="text" name="username" class="username" placeholder="用户名   ">
+                <input type="password" name="password" class="pwd" placeholder="密码    ">
+                  <input type="text" name="qrcode" class="qrcode" placeholder="请输入验证码   |">
+                  <button @click="myfunc" class="getqr">获取验证码</button>
+                <button type="primary" round class="btn">登陆</button>
+            </form>
+          </div>
+        <style>
+        *{
+          margin: 0;
+          padding: 0;
+        }
+        body{
+          background-image: url("./yt.jpg");
+          background-attachment: fixed;
+          background-size: 100% 100%; 
+        }
+        .username{
+          margin: 20px 50px;
+          box-sizing: border-box;
+          height: 50px;
+          width: 300px;
+          background-color:#f7f8f6;
+          border-radius: 15px;
+        }
+        .pwd{
+          margin: 20px 50px;
+          box-sizing: border-box;
+          height: 50px;
+          width: 300px;
+          background-color:#f7f8f6;
+          border-radius: 15px;
+        }
+        .qrcode{
+          margin: 20px 50px;
+          box-sizing: border-box;
+          height: 50px;
+          width: 300px;
+          background-color:#f7f8f6;
+          border-radius: 15px;
+        }
+        .getqr{
+          position:relative;
+          left: 220px;
+          bottom: 55px;
+          background-color: #f7f8f6;
+          border: 1px none black;
+          color: #0081ff;
+        }
+        .getqr:active{
+          color: black;
+        }
+        .username,.pwd,.qrcode{
+          padding-left: 60px;
+        }
+        .box{
+          opacity:0.8;
+          padding-top: 50px;
+          box-sizing: border-box;
+          margin: 100px auto;
+          height: 500px;
+          width: 400px;
+          background-color:  #001f3f;
+          border-radius: 15px;
+          box-shadow:0px 0px 2px 2px black;/* 水平|竖直|模糊距离|阴影尺寸|颜色*/
+        }
+        .btn{
+            height: 40px;
+            width: 80px;
+            margin: 20px 160px;
+            background-color: #0081ff;
+            border-radius: 15px;
+        }
+        </style>
+</body>
+</html>
