@@ -11,12 +11,15 @@
                <div class="tlt">
               域名登陆系统
             </div>
-            <form @submit.prevent="">
+            <form @submit.prevent="函数名">
                 <input type="text" name="username" class="username" placeholder="用户名   ">
                 <input type="password" name="password" class="pwd" placeholder="密码    ">
-                  <input type="text" name="qrcode" class="qrcode" placeholder="请输入验证码   |">
-                  <button @click="myfunc" class="getqr">获取验证码</button>
-                <button type="primary" round class="btn">登陆</button>
+                <input type="text" name="qrcode" class="qrcode" placeholder="请输入验证码   |">
+                <button @click="myfunc" type="button" class="getqr">获取验证码</button>
+                <button type="submit" class="subbtn">登陆</button>
+                <button type="button" class="btbtn">立即注册</button>
+                <button type="button" class="forgetbtn">忘记密码</button>
+                <button type="reset" class="rebtn">重置</button>
             </form>
           </div>
         <style>
@@ -24,7 +27,6 @@
           margin: 0;
           padding: 0;
         }
-        
         body{
           background-image: url("./yt.jpg");
           background-attachment: fixed;
@@ -41,7 +43,7 @@
           border-radius: 15px;
           box-shadow:0px 0px 2px 2px black;/* 水平|竖直|模糊距离|阴影尺寸|颜色*/
         }
-            /*实际显示高/宽=边框+外边距+内边距+高/宽*/
+        /*实际显示高/宽=边框+外边距+内边距+高/宽*/
         .tlt{
           text-align: center;
           margin-left: 50px;
@@ -88,14 +90,36 @@
         .username,.pwd,.qrcode{
           padding-left: 60px;
         }
-        
-        .btn{
+        .subbtn{
             height: 40px;
             width: 80px;
             margin: 20px 160px;
-            background-color: #0081ff;
+            background-color: white;
             border-radius: 15px;
         }
+        .subbtn:active{
+          background-color: #0081ff;
+        }
+        .btbtn,.forgetbtn,.rebtn{
+          border: 1px none black;
+          background-color: #001f3f;
+          position:relative;
+          bottom:110px;
+          left: 80px;
+          height: 40px;
+          width: 80px;
+          color: white;
+        }
+        .btbtn:active,.rebtn:active{
+          color: #0081ff;
+        }
+        .forgetbtn:active{
+          color: #0081ff;
+        }
+        .rebtn:active{
+          color: #0081ff;
+        }
+
         </style>
 </body>
 </html>
