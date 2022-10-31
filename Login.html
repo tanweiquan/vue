@@ -8,6 +8,9 @@
 </head>
 <body>
           <div class="box">
+               <div class="tlt">
+              域名登陆系统
+            </div>
             <form @submit.prevent="">
                 <input type="text" name="username" class="username" placeholder="用户名   ">
                 <input type="password" name="password" class="pwd" placeholder="密码    ">
@@ -21,10 +24,31 @@
           margin: 0;
           padding: 0;
         }
+        
         body{
           background-image: url("./yt.jpg");
           background-attachment: fixed;
           background-size: 100% 100%; 
+        }
+        .box{
+          opacity:0.8;/*透明度*/
+          padding-top: 50px;
+          box-sizing: border-box;
+          margin: 100px auto;
+          height: 500px;
+          width: 400px;
+          background-color:  #001f3f;
+          border-radius: 15px;
+          box-shadow:0px 0px 2px 2px black;/* 水平|竖直|模糊距离|阴影尺寸|颜色*/
+        }
+            /*实际显示高/宽=边框+外边距+内边距+高/宽*/
+        .tlt{
+          text-align: center;
+          margin-left: 50px;
+          height: 50px;
+          width: 300px;
+          color:white;
+          font-size: 30px;
         }
         .username{
           margin: 20px 50px;
@@ -64,17 +88,7 @@
         .username,.pwd,.qrcode{
           padding-left: 60px;
         }
-        .box{
-          opacity:0.8;/*透明度*/
-          padding-top: 50px;
-          box-sizing: border-box;
-          margin: 100px auto;
-          height: 500px;
-          width: 400px;
-          background-color:  #001f3f;
-          border-radius: 15px;
-          box-shadow:0px 0px 2px 2px black;/* 水平|竖直|模糊距离|阴影尺寸|颜色*/
-        }
+        
         .btn{
             height: 40px;
             width: 80px;
